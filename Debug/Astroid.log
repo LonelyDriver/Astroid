@@ -1,0 +1,3 @@
+﻿  Player.cpp
+c:\users\user\documents\privat\repos\astroid\astroid\astroid\player.cpp(33): warning C4244: "Initialisierung": Konvertierung von "double" in "float", möglicher Datenverlust
+  Astroid.vcxproj -> C:\Users\User\Documents\Privat\Repos\Astroid\Astroid\Debug\Astroid.exe
