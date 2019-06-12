@@ -4,6 +4,7 @@
 astro::BigMeteor::BigMeteor(World & world, sf::Texture & tex) :
 	Meteor(world, tex)
 {
+	m_mass = 0.15;
 	std::cout << "BigMeteor created\n";
 }
 

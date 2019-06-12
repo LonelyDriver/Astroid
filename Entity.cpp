@@ -30,10 +30,20 @@ namespace astro
 		return m_sprite.getPosition();
 	}
 
+	const sf::Vector2f & Entity::getVelocity()
+	{
+		return m_vel;
+	}
+
 	void Entity::setPosition(sf::Vector2f pos)
 	{
 		m_sprite.setPosition(pos);
 		m_pos = pos;
+	}
+
+	void Entity::setVelocity(sf::Vector2f vel)
+	{
+		m_vel = vel;
 	}
 
 	bool Entity::isAlive() const

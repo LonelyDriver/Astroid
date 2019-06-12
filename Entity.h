@@ -16,10 +16,14 @@ namespace astro
 		virtual void update(sf::Time deltaTime);
 		virtual void processEvents();
 		const sf::Vector2f& getPosition();
+		const sf::Vector2f& getVelocity();
+		const float getMass() { return m_mass; };
 		virtual void setPosition(sf::Vector2f pos);
+		virtual void setVelocity(sf::Vector2f vel);
 		bool isAlive() const;
 		virtual void onDestroy();
 		sf::Sprite & getSprite();
+
 
 	protected:
 
@@ -28,6 +32,7 @@ namespace astro
 		sf::Vector2f m_pos;
 		sf::Vector2f m_vel;
 		bool m_alive;
+		float m_mass;
 	private:
 		virtual void draw(sf::RenderTarget & target, sf::RenderStates states) const override;
 	};

@@ -1,3 +1,4 @@
-﻿  Player.cpp
-c:\users\user\documents\privat\repos\astroid\astroid\astroid\player.cpp(33): warning C4244: "Initialisierung": Konvertierung von "double" in "float", möglicher Datenverlust
+﻿  Collision.cpp
+c:\users\user\documents\privat\repos\astroid\astroid\astroid\collision.cpp(100): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": result" wird zurückgegeben
+c:\users\user\documents\privat\repos\astroid\astroid\astroid\collision.cpp(94): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": result" wird zurückgegeben
   Astroid.vcxproj -> C:\Users\User\Documents\Privat\Repos\Astroid\Astroid\Debug\Astroid.exe

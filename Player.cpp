@@ -9,6 +9,7 @@ namespace astro
 		m_rotation(0),
 		m_isMoving(false)
 	{
+		m_mass = .15;
 		m_sprite.setPosition(sf::Vector2f(300, 300));
 		std::cout << "Player created\n";
 	}

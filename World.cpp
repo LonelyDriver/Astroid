@@ -56,9 +56,31 @@ namespace astro
 			// Collision detection, invincible for 3 seconds after collision
 			std::list<Entity*>::iterator it;
 			it = m_entities.begin();
-			Entity * pFirst = *it;
 
-			for (it = std::next(m_entities.begin()); it != m_entities.end(); ++it)
+			// check collision with each entity
+			std::list<Entity*> list_copiedEntities(std::next(m_entities.begin()), m_entities.end());
+
+			for (it; it != m_entities.end(); ++it)
+			{
+				Entity *pFirst = *it;
+				std::list<Entity*>::iterator jt;
+				for (jt = list_copiedEntities.begin(); jt != list_copiedEntities.end(); ++jt)
+				{
+					Entity *pSecond = *jt;
+					bool collide = m_collision.isColliding(pFirst->getSprite(), pSecond->getSprite());
+					if (collide)
+					{
+						m_collision.elasticCollision(pFirst, pSecond);
+					}
+						
+				}
+				list_copiedEntities.pop_front();
+				if (list_copiedEntities.size() < 1)
+					break;
+			}
+
+
+			/*for (it = std::next(m_entities.begin()); it != m_entities.end(); ++it)
 			{
 				Entity *pSecond = *it;
 				if (m_collision.isColling(pFirst->getSprite(), pSecond->getSprite()) && m_collisionT >= 3.f)
@@ -66,7 +88,7 @@ namespace astro
 					m_collisionT = 0;
 					--m_lives;
 				}				
-			}
+			}*/
 
 		}
 		else

@@ -12,7 +12,6 @@ namespace astro
 
 		int getPoints();
 		void update(sf::Time deltaTime);
-
 	};
 
 }
